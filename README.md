@@ -1,4 +1,4 @@
-# IDs super tool by Ethan94FL
+# Sacred IDs tool by Ethan94FL
 
 ## Per <ins>Sacred: la leggenda dell'arma sacra</ins>
 
