@@ -1,0 +1,199 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    display: absolute;
+    inset: 0;
+    padding: 14px;
+    margin: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    display: absolute;
+    inset: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    gap: 24px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.app-container {
+    width: 100%;
+    height: 100%;
+    border: 2px solid slategray;
+    border-radius: 6px;
+    overflow: hidden;
+    overflow-y: auto;
+    position: relative;
+}
+
+.search-box-container {
+    padding: 8px;
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    width: 100%;
+    position: sticky;
+    top: 0px;
+    background: #FFF;
+    border-bottom: 2px solid #000000;
+}
+
+.search-box-input {
+    transition-duration: 300ms;
+    border: 0;
+    border-bottom: 2px solid rgba(112, 128, 144, 0.568);
+    background-color: rgba(0, 0, 0, 0.048);
+    padding: 6px;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 4px 4px 0 0;
+}
+
+.search-box-input:hover {
+    border-color: slategray;
+    background-color: rgba(0, 0, 0, 0.020);
+}
+
+.sections-buttons-container {
+    display: flex;
+    gap: 8px;
+    padding: 8px 0;
+}
+
+.item-list-container {
+    background-color: white;
+    border: 0;
+}
+
+.top-title-container {
+    border-bottom: 1px solid gray;
+    display: flex;
+    gap: 16px;
+    padding-bottom: 8px;
+}
+
+.top-title {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2em;
+    font-weight: 600;
+}
+
+/* Generic button */
+button {
+    border: 1px solid rgb(73, 64, 134);
+    background: slateblue;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 14px;
+    transition-duration: 300ms;
+    cursor: pointer;
+}
+
+button:hover {
+    background: rgb(77, 67, 143);
+}
+
+/* Database buttons */
+button[data-isSelected="true"] {
+    background: rgb(52, 47, 88);
+}
+
+/* Table */
+
+table {
+    background-color: white;
+    border-collapse: collapse;
+    width: 100%;
+    margin: 6px;
+}
+
+.id-cell,
+.value-cell {
+    border: 1px solid #dddddd;
+    padding: 4px 12px;
+}
+
+
+th {
+    border: 1px solid #dddddd;
+    padding: 4px 12px;
+    min-width: max-content;
+    text-align: left;
+}
+
+tr {
+    cursor: pointer;
+}
+
+tr:nth-child(even) {
+    background-color: #e0ecf1;
+}
+
+tr:hover {
+    background-color: #adadad;
+}
+
+#toast {
+    visibility: hidden;
+    min-width: 200px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px;
+    position: fixed;
+    z-index: 1000;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#toast.show {
+    visibility: visible;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
