@@ -1,3 +1,4 @@
+const version = "1.1.1";
 const input = document.querySelector("input");
 const searchBoxContainer = document.body.querySelector(".sections-buttons-container");
 const table = document.body.querySelector("table");
@@ -7,6 +8,10 @@ let filter = "";
 
 document.body.onload = () => {
     // Succede dopo che la pagina viene caricata
+    const versionStringElement = document.querySelector(".version-string");
+    versionStringElement.textContent = "V" + version;
+    versionStringElement.setAttribute("title", "La versione in uso è la " + version);
+
     database.forEach(data => {
         generateDatabaseSelector(data);
     });
