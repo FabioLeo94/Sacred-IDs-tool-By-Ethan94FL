@@ -20099,31 +20099,36 @@ const various_equipment = [
 const database = [
     {
         id: 0,
+        data: [...mobs, ...scenic_effects, ...items, ...combat_arts, ...quest_items, ...various_equipment],
+        name: "Tutto"
+    },
+    {
+        id: 1,
         data: mobs,
         name: "Mobs"
     },
     {
-        id: 1,
+        id: 2,
         data: items,
         name: "Oggetti"
     },
     {
-        id: 2,
+        id: 3,
         data: combat_arts,
         name: "Arti di combattimento\\Magie"
     },
     {
-        id: 3,
+        id: 4,
         data: quest_items,
         name: "Oggetti missione"
     },
     {
-        id: 4,
+        id: 5,
         data: scenic_effects,
         name: "Oggetti scenici"
     },
     {
-        id: 5,
+        id: 6,
         data: various_equipment,
         name: "Equipaggiamenti vari"
     },
