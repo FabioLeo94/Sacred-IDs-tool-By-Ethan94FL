@@ -43,19 +43,22 @@ p {
     height: 100%;
     border: 2px solid slategray;
     border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
     overflow: hidden;
-    overflow-y: auto;
     position: relative;
 }
 
 .search-box-container {
     padding: 8px;
     display: flex;
-    flex: 1 1 auto;
+    flex: 0 1 0%;
     flex-direction: column;
     width: 100%;
+    height: 100%;
     position: sticky;
-    top: 0px;
+    top: 0;
     background: #FFF;
     border-bottom: 2px solid #000000;
 }
@@ -83,8 +86,15 @@ p {
 }
 
 .item-list-container {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    width: 100%;
     background-color: white;
     border: 0;
+    overflow: hidden;
+    overflow-y: auto;
+    position: relative;
 }
 
 .top-title-container {
@@ -131,7 +141,9 @@ table {
     background-color: white;
     border-collapse: collapse;
     width: 100%;
-    margin: 6px;
+    position: sticky;
+    top: 0;
+    padding: 12px
 }
 
 .id-cell,
@@ -140,23 +152,27 @@ table {
     padding: 4px 12px;
 }
 
-
-th {
+tr>th {
+    background: #fff;
     border: 1px solid #dddddd;
     padding: 4px 12px;
     min-width: max-content;
     text-align: left;
+    position: sticky;
+    top: 0;
 }
 
-tr {
+tr>td {
     cursor: pointer;
 }
 
-tr:nth-child(even of :not(.hidden)):not(:hover) {
+tr:nth-child(even of :not(.hidden)):not(:hover)>td {
     background-color: #e0ecf1;
 }
 
-tr:hover {
+
+
+tr:hover>td {
     background-color: #fff7db;
 }
 
