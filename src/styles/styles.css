@@ -91,6 +91,7 @@ p {
     display: flex;
     gap: 16px;
     padding-bottom: 8px;
+    align-items: center;
 }
 
 .top-title {
@@ -152,6 +153,10 @@ tr:nth-child(even of :not(.hidden)):not(:hover) {
 
 tr:hover {
     background-color: #fff7db;
+}
+
+.version-string {
+    color: rgb(197, 197, 197)
 }
 
 #toast {
