@@ -19,7 +19,7 @@ document.body.onload = () => {
             let value = String(tr.childNodes[1].textContent);
 
             if (tr.children[0].tagName.toLowerCase() !== "th") {
-                if (!!filter && String(id).includes(String(filter)) || value.toLowerCase().startsWith(String(filter).toLowerCase())) {
+                if (!!filter && String(id).includes(String(filter)) || value.toLowerCase().includes(String(filter).toLowerCase())) {
                     tr.style.display = "table-row";
                     tr.classList.remove("hidden")
                 } else {
@@ -50,7 +50,7 @@ function addRowData(data) {
         dataID.className = "id-cell";
         dataValue.className = "value-cell";
 
-        if (!!filter && String(dId).includes(String(filter)) || dValue.toLowerCase().startsWith(String(filter).toLowerCase())) {
+        if (!!filter && String(dId).includes(String(filter)) || dValue.toLowerCase().includes(String(filter).toLowerCase())) {
             row.style.display = "table-row";
         } else {
             row.style.display = "none";
