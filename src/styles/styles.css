@@ -146,12 +146,12 @@ tr {
     cursor: pointer;
 }
 
-tr:nth-child(even of :not(.hidden)) {
+tr:nth-child(even of :not(.hidden)):not(:hover) {
     background-color: #e0ecf1;
 }
 
 tr:hover {
-    background-color: #adadad;
+    background-color: #fff7db;
 }
 
 #toast {
