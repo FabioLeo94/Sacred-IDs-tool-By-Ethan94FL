@@ -1,4 +1,4 @@
-const version = "1.1.1";
+const version = "1.1.1"; // MAJOR, MINOR, PATCH
 const input = document.querySelector("input");
 const searchBoxContainer = document.body.querySelector(".sections-buttons-container");
 const table = document.body.querySelector("table");
